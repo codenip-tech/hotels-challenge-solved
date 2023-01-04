@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "availableRooms": 10,
+    "pool": true,
+    "gym": true,
+    "restaurant": false
+  },
+  {
+    "id": 23,
+    "availableRooms": 2,
+    "pool": false,
+    "gym": true,
+    "restaurant": true
+  },
+  {
+    "id": 31,
+    "availableRooms": 5,
+    "pool": true,
+    "gym": false,
+    "restaurant": true
+  },
+  {
+    "id": 33,
+    "availableRooms": 20,
+    "pool": true,
+    "gym": true,
+    "restaurant": true
+  },
+  {
+    "id": 40,
+    "availableRooms": 9,
+    "pool": false,
+    "gym": false,
+    "restaurant": true
+  }
+]

@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+use Codenip\Command\HotelsByAvailableRoomsCommand;
+use Codenip\Command\HotelsByAvailableServiceCommand;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$application = new Symfony\Component\Console\Application;
+
+$guzzleClient = new \GuzzleHttp\Client([
+    'base_uri' => 'https://run.mocky.io'
+]);
+$httpClient = new \Codenip\Http\HttpClient($guzzleClient);
+$reader = new \Codenip\Reader\JsonReader();
+
+$hotelsByRoom = new \Codenip\Service\HotelsByRooms($httpClient, $reader);
+$hotelsByService = new \Codenip\Service\HotelsByService($httpClient, $reader);
+
+$application->add(new HotelsByAvailableRoomsCommand($hotelsByRoom));
+$application->add(new HotelsByAvailableServiceCommand($hotelsByService));
+
+$application->run();

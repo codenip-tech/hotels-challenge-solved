@@ -1,0 +1,34 @@
+{
+  "name": "codenip/hotel-offers-challenge",
+  "description": "Hotel offers coding challenge",
+  "authors": [
+    {
+      "name": "Juan González Montes",
+      "email": "codenip.official@gmail.com"
+    }
+  ],
+  "license": "proprietary",
+  "type": "project",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Codenip\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Codenip\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "phpunit/phpunit": "~9.0",
+    "symfony/console": "^5.4",
+    "guzzlehttp/guzzle": "^7.5"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
+}
